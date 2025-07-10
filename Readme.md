@@ -2,9 +2,12 @@
 
 A comprehensive AI-powered stock analysis tool that provides fundamental analysis, technical indicators, and investment recommendations using LangGraph and Google's Gemini AI.
 
-![Stock Analysis Tool](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![AI](https://img.shields.io/badge/AI-Powered-brightgreen?style=for-the-badge)
+![LangChain](https://img.shields.io/badge/LangChain-3C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-Flow%20Control-orange?style=for-the-badge)
+
 
 ## 🚀 Features
 
@@ -155,11 +158,6 @@ TAVILY_API_KEY=your_tavily_api_key
 LANGCHAIN_API_KEY=your_langchain_api_key
 ```
 
-### Customization
-- Modify prompts in `src/prompt.py`
-- Add new analysis tools in `src/helper.py`
-- Customize UI in `templates/` and `static/`
-
 ## 🚀 Deployment
 
 ### Local Development
@@ -172,9 +170,9 @@ uvicorn app:app --reload --host 127.0.0.1 --port 8000
 uvicorn app:app --host 0.0.0.0 --port 8000 --workers 4
 ```
 
-### Docker (Optional)
+### Docker 
 ```dockerfile
-FROM python:3.9-slim
+FROM python:3.10-slim-buster
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install -r requirements.txt
@@ -207,6 +205,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Yahoo Finance](https://finance.yahoo.com/) for stock data
 - [Google Gemini AI](https://ai.google.dev/) for AI-powered analysis
 - [LangChain](https://python.langchain.com/) for AI framework
+- [LangGraph](https://www.langchain.com/langgraph) for AI framework
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
 - [Technical Analysis Library](https://github.com/bukosabino/ta) for indicators
 
@@ -214,26 +213,15 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Some international stocks may have limited data
 - API rate limits may apply for high-frequency requests
-- Real-time data has a slight delay
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/yourusername/stock-analysis-tool/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/stock-analysis-tool/discussions)
-- **Email**: your.email@example.com
+- Can't be used for future stock prediction currently.
 
 ## 🔮 Future Enhancements
 
-- [ ] Portfolio analysis
 - [ ] Stock comparison tool
-- [ ] Email alerts for stock movements
-- [ ] Mobile app
-- [ ] Advanced charting capabilities
-- [ ] Social sentiment analysis
+- [ ] Adding advanced evaluation metrics (https://www.netsuite.com/portal/resource/articles/accounting/financial-kpis-metrics.shtml)
+- [ ] Social sentiment analysis (Incorporating current affairs)
 - [ ] Machine learning predictions
 
 ---
 
 ⭐ **Star this repository if you find it helpful!** ⭐
-
-Made with ❤️ by [Your Name](https://github.com/yourusername)
