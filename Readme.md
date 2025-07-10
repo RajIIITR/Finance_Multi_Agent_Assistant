@@ -28,20 +28,20 @@ A comprehensive AI-powered stock analysis tool that provides fundamental analysi
 ## 📦 Installation
 
 ### Prerequisites
-- Python 3.8 or higher
+- Python 3.10 
 - pip package manager
 - Google API key for Gemini AI
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/stock-analysis-tool.git
-cd stock-analysis-tool
+git clone https://github.com/RajIIITR/Finance_Multi_Agent_Assistant.git
+cd Finance_Multi_Agent_Assistant
 ```
 
 ### 2. Create Virtual Environment
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+conda create -p finance_assist python=3.10 -y
+conda activate user/path/..
 ```
 
 ### 3. Install Dependencies
@@ -53,7 +53,6 @@ pip install -r requirements.txt
 Create a `.env` file in the root directory:
 ```env
 GOOGLE_API_KEY=your_google_api_key_here
-TAVILY_API_KEY=your_tavily_api_key_here  # Optional
 LANGCHAIN_API_KEY=your_langchain_api_key_here  # Optional
 ```
 
@@ -104,6 +103,9 @@ print(response.json())
 
 ```
 stock-analysis-tool/
+├── research
+│   ├── trial1.ipynb       # Prototyping part 1
+│   ├── trial.ipynb        # Prototyping part 2 (Advancing)
 ├── app.py                 # Main FastAPI application
 ├── requirements.txt       # Python dependencies
 ├── .env                  # Environment variables
