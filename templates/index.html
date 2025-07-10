@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Analysis Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📈 Stock Analysis Tool</h1>
+            <p>Get comprehensive fundamental analysis for any stock</p>
+        </header>
+        
+        <main>
+            <form action="/analyze" method="post" class="analysis-form">
+                <div class="form-group">
+                    <label for="ticker">Stock Symbol:</label>
+                    <input type="text" id="ticker" name="ticker" required 
+                           placeholder="e.g., AAPL, TSLA, TATASTEEL.NS">
+                </div>
+                
+                <div class="form-group">
+                    <label for="question">Question:</label>
+                    <textarea id="question" name="question" rows="3" required 
+                              placeholder="Should I buy this stock?">Should I buy this stock?</textarea>
+                </div>
+                
+                <button type="submit" class="btn-analyze">Analyze Stock</button>
+            </form>
+        </main>
+        
+        <footer>
+            <p>Powered by AI-driven financial analysis</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', path='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Stock Analysis Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚠️ Analysis Error</h1>
+            <p>Something went wrong during the analysis</p>
+        </header>
+        
+        <main>
+            <div class="error-container">
+                <div class="error-message">
+                    <h3>Error Details:</h3>
+                    <p>{{ error }}</p>
+                </div>
+                
+                <div class="actions">
+                    <a href="/" class="btn-secondary">Try Again</a>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Please check your input and try again</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', path='script.js') }}"></script>
+</body>
+</html>

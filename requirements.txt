@@ -11,3 +11,5 @@ uvicorn
 pandas
 ta
 yfinance
+jinja2
+python-multipart
