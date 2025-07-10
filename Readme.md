@@ -165,10 +165,6 @@ LANGCHAIN_API_KEY=your_langchain_api_key
 uvicorn app:app --reload --host 127.0.0.1 --port 8000
 ```
 
-### Production
-```bash
-uvicorn app:app --host 0.0.0.0 --port 8000 --workers 4
-```
 
 ### Docker 
 ```dockerfile
@@ -180,13 +176,6 @@ COPY . .
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-## 📈 Screenshots
-
-### Main Interface
-![Main Interface](screenshots/main-interface.png)
-
-### Analysis Results
-![Analysis Results](screenshots/analysis-results.png)
 
 ## 🤝 Contributing
 
@@ -195,10 +184,7 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+   
 
 ## 🙏 Acknowledgments
 
