@@ -1,3 +1,4 @@
 finance_assitant/*
 .env
 __pycache__/*
+src/__pycache__/*
