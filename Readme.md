@@ -1,4 +1,4 @@
-# 📈 Stock Analysis Tool
+# Stock Analysis Tool
 
 A comprehensive AI-powered stock analysis tool that provides fundamental analysis, technical indicators, and investment recommendations using LangGraph and Google's Gemini AI.
 
@@ -9,18 +9,17 @@ A comprehensive AI-powered stock analysis tool that provides fundamental analysi
 ![LangGraph](https://img.shields.io/badge/LangGraph-Flow%20Control-orange?style=for-the-badge)
 
 
-## 🚀 Features
+## Features
 
-- **📊 Comprehensive Stock Analysis**: Get detailed fundamental analysis for any stock
-- **🔍 Technical Indicators**: RSI, MACD, Stochastic Oscillator, VWAP analysis
-- **💰 Financial Metrics**: P/E ratio, Price-to-Book, Debt-to-Equity, Profit Margins
-- **🤖 AI-Powered Insights**: Leveraging Google's Gemini AI for intelligent analysis
-- **🌐 Web Interface**: Clean, responsive web interface
-- **📱 Mobile Friendly**: Works seamlessly on desktop and mobile devices
-- **🔄 Real-time Data**: Live stock data from Yahoo Finance
-- **⚡ Fast API**: Built with FastAPI for high performance
+- **Comprehensive Stock Analysis**: Get detailed fundamental analysis for any stock
+- **Technical Indicators**: RSI, MACD, Stochastic Oscillator, VWAP analysis
+- **Financial Metrics**: P/E ratio, Price-to-Book, Debt-to-Equity, Profit Margins
+- **AI-Powered Insights**: Leveraging Google's Gemini AI for intelligent analysis
+- **Web Interface**: Clean, responsive web interface
+- **Real-time Data**: Live stock data from Yahoo Finance
+- **Fast API**: Built with FastAPI for high performance
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Backend**: FastAPI, Python
 - **AI/ML**: LangChain, LangGraph, Google Gemini AI
@@ -28,7 +27,7 @@ A comprehensive AI-powered stock analysis tool that provides fundamental analysi
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
 - **Deployment**: Uvicorn ASGI server
 
-## 📦 Installation
+## Installation (FOr your and mine reference in future)
 
 ### Prerequisites
 - Python 3.10 
@@ -44,7 +43,7 @@ cd Finance_Multi_Agent_Assistant
 ### 2. Create Virtual Environment
 ```bash
 conda create -p finance_assist python=3.10 -y
-conda activate user/path/..
+conda activate finance_assist/ 
 ```
 
 ### 3. Install Dependencies
@@ -69,7 +68,7 @@ Or using uvicorn:
 uvicorn app:app --reload --host 0.0.0.0 --port 8000
 ```
 
-## 🌐 Usage
+## Usage
 
 ### Web Interface
 1. Navigate to `http://localhost:8000`
@@ -96,11 +95,10 @@ response = requests.post("http://localhost:8000/api/analyze", json={
 print(response.json())
 ```
 
-## 📊 Supported Stock Symbols
+## Supported Stock Symbols
 
 - **US Stocks**: AAPL, GOOGL, MSFT, TSLA, AMZN, etc.
 - **Indian Stocks**: TATASTEEL.NS, RELIANCE.NS, INFY.NS, etc.
-- **International**: Most major stock exchanges supported
 
 ## 🏗️ Project Structure
 
@@ -126,7 +124,7 @@ stock-analysis-tool/
     └── script.js         # JavaScript functionality
 ```
 
-## 🎯 Key Components
+## Key Components
 
 ### Stock Analysis Features
 - **Price Analysis**: Historical price trends and movements
@@ -154,15 +152,15 @@ stock-analysis-tool/
 GOOGLE_API_KEY=your_google_api_key
 
 # Optional (for enhanced features)
-TAVILY_API_KEY=your_tavily_api_key
+TAVILY_API_KEY=your_tavily_api_key  (Will add in my future use case)
 LANGCHAIN_API_KEY=your_langchain_api_key
 ```
 
-## 🚀 Deployment
+## Deployment
 
 ### Local Development
 ```bash
-uvicorn app:app --reload --host 127.0.0.1 --port 8000
+uvicorn app:app --reload
 ```
 
 
@@ -175,15 +173,6 @@ RUN pip install -r requirements.txt
 COPY . .
 CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
-
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
    
 
 ## 🙏 Acknowledgments
@@ -194,14 +183,14 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 - [LangGraph](https://www.langchain.com/langgraph) for AI framework
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
 - [Technical Analysis Library](https://github.com/bukosabino/ta) for indicators
+- [Got idea of various key metrics from this blog and immplementation](https://abhinavk910.medium.com/building-an-agentic-financial-analyst-with-langgraph-and-openai-5138192c9783) referred this blog
 
-## 🐛 Known Issues
+## Known Issues
 
-- Some international stocks may have limited data
 - API rate limits may apply for high-frequency requests
 - Can't be used for future stock prediction currently.
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Stock comparison tool
 - [ ] Adding advanced evaluation metrics (https://www.netsuite.com/portal/resource/articles/accounting/financial-kpis-metrics.shtml)
