@@ -183,7 +183,7 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 - [LangGraph](https://www.langchain.com/langgraph) for AI framework
 - [FastAPI](https://fastapi.tiangolo.com/) for the web framework
 - [Technical Analysis Library](https://github.com/bukosabino/ta) for indicators
-- [Got idea of various key metrics from this blog and immplementation](https://abhinavk910.medium.com/building-an-agentic-financial-analyst-with-langgraph-and-openai-5138192c9783) referred this blog
+- [Got idea of various key metrics from this blog and implementation](https://abhinavk910.medium.com/building-an-agentic-financial-analyst-with-langgraph-and-openai-5138192c9783)
 
 ## Known Issues
 
