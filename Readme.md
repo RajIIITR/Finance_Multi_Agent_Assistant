@@ -27,48 +27,11 @@ A comprehensive AI-powered stock analysis tool that provides fundamental analysi
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
 - **Deployment**: Uvicorn ASGI server
 
-## Installation (FOr your and mine reference in future)
-
-### Prerequisites
-- Python 3.10 
-- pip package manager
-- Google API key for Gemini AI
-
-### 1. Clone the Repository
+### Run the Application on Local
+using uvicorn:
 ```bash
-git clone https://github.com/RajIIITR/Finance_Multi_Agent_Assistant.git
-cd Finance_Multi_Agent_Assistant
+uvicorn app:app --reload 
 ```
-
-### 2. Create Virtual Environment
-```bash
-conda create -p finance_assist python=3.10 -y
-conda activate finance_assist/ 
-```
-
-### 3. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 4. Set Up Environment Variables
-Create a `.env` file in the root directory:
-```env
-GOOGLE_API_KEY=your_google_api_key_here
-LANGCHAIN_API_KEY=your_langchain_api_key_here  # Optional
-```
-
-### 5. Run the Application
-```bash
-python app.py
-```
-
-Or using uvicorn:
-```bash
-uvicorn app:app --reload --host 0.0.0.0 --port 8000
-```
-
-## Usage
 
 ### Web Interface
 1. Navigate to `http://localhost:8000`
@@ -76,31 +39,14 @@ uvicorn app:app --reload --host 0.0.0.0 --port 8000
 3. Ask your question about the stock
 4. Click "Analyze Stock" to get comprehensive analysis
 
-### API Endpoints
-- **GET** `/` - Main web interface
-- **POST** `/analyze` - Web form analysis
-- **POST** `/api/analyze` - JSON API endpoint
-- **GET** `/health` - Health check
-- **GET** `/docs` - Interactive API documentation
 
-### API Usage Example
-```python
-import requests
-
-response = requests.post("http://localhost:8000/api/analyze", json={
-    "ticker": "AAPL",
-    "question": "Should I buy this stock?"
-})
-
-print(response.json())
-```
 
 ## Supported Stock Symbols
 
 - **US Stocks**: AAPL, GOOGL, MSFT, TSLA, AMZN, etc.
 - **Indian Stocks**: TATASTEEL.NS, RELIANCE.NS, INFY.NS, etc.
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 stock-analysis-tool/
@@ -139,43 +85,8 @@ stock-analysis-tool/
   - Debt-to-Equity Ratio
   - Profit Margins
 
-### AI-Powered Analysis
-- Uses Google's Gemini AI for intelligent insights
-- LangGraph for structured analysis workflow
-- Comprehensive fundamental analysis reports
 
-## 🔧 Configuration
-
-### Environment Variables
-```env
-# Required
-GOOGLE_API_KEY=your_google_api_key
-
-# Optional (for enhanced features)
-TAVILY_API_KEY=your_tavily_api_key  (Will add in my future use case)
-LANGCHAIN_API_KEY=your_langchain_api_key
-```
-
-## Deployment
-
-### Local Development
-```bash
-uvicorn app:app --reload
-```
-
-
-### Docker 
-```dockerfile
-FROM python:3.10-slim-buster
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
-```
-   
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Yahoo Finance](https://finance.yahoo.com/) for stock data
 - [Google Gemini AI](https://ai.google.dev/) for AI-powered analysis
@@ -185,12 +96,8 @@ CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
 - [Technical Analysis Library](https://github.com/bukosabino/ta) for indicators
 - [Got idea of various key metrics from this blog and implementation](https://abhinavk910.medium.com/building-an-agentic-financial-analyst-with-langgraph-and-openai-5138192c9783)
 
-## Known Issues
 
-- API rate limits may apply for high-frequency requests
-- Can't be used for future stock prediction currently.
-
-## Future Enhancements
+## Future Enhancements (WIll add soon)
 
 - [ ] Stock comparison tool
 - [ ] Adding advanced evaluation metrics (https://www.netsuite.com/portal/resource/articles/accounting/financial-kpis-metrics.shtml)
